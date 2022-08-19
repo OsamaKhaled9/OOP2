@@ -2,7 +2,7 @@ import java.util.Scanner
 
 fun main() {
     var scan = Scanner(System.`in`)
-    println("Enter bme car model and speed")
+    println("Enter bmw car model and speed")
     val bm = BMW(scan.next(), scan.next(), scan.nextFloat())
     scan.nextLine()
     println("Fuel type is ${bm.getFuelType()}")
@@ -13,53 +13,18 @@ fun main() {
 }
 
 abstract class Car(model:String,color:String,speed:Float) {
-    abstract fun getFuelType(): String {
-        return "gas"
-    }
+    abstract fun getFuelType(): String
 }
 class BMW (model:String,color:String,speed:Float):Car(model,color,speed) {
     override fun getFuelType(): String {
-        TODO("Not yet implemented")
+
         return "gas"
     }
 }
 
 class Tesla (model:String,color:String,speed:Float):Car(model,color,speed) {
     override fun getFuelType(): String {
-        TODO("Not yet implemented")
+
         return "electricity"
     }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
